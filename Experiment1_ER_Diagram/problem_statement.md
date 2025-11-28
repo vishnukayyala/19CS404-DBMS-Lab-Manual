@@ -1,143 +1,299 @@
-# ER Diagram Workshop – Submission Template
+# Experiment 1: Entity-Relationship (ER) Diagram
 
-## Objective
-To understand and apply ER modeling concepts by creating ER diagrams for real-world applications.
+## 🎯 Objective:
+To understand and apply the concepts of ER modeling by creating an ER diagram for a real-world application.
 
-## Purpose
-Gain hands-on experience in designing ER diagrams that represent database structure including entities, relationships, attributes, and constraints.
-
----
-
-# Scenario A: City Fitness Club Management
-
-**Business Context:**  
-FlexiFit Gym wants a database to manage its members, trainers, and fitness programs.
-
-**Requirements:**  
-- Members register with name, membership type, and start date.  
-- Each member can join multiple programs (Yoga, Zumba, Weight Training).  
-- Trainers assigned to programs; a program may have multiple trainers.  
-- Members may book personal training sessions with trainers.  
-- Attendance recorded for each session.  
-- Payments tracked for memberships and sessions.
-
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_fitness.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
+## 📚 Purpose:
+The purpose of this workshop is to gain hands-on experience in designing ER diagrams that visually represent the structure of a database including entities, relationships, attributes, and constraints.
 
 ---
 
-# Scenario B: City Library Event & Book Lending System
+## 🧪 Choose One Scenario:
 
-**Business Context:**  
-The Central Library wants to manage book lending and cultural events.
+### 🔹 Scenario 1: University Database
+Design a database to manage students, instructors, programs, courses, and student enrollments. Include prerequisites for courses.
 
-**Requirements:**  
-- Members borrow books, with loan and return dates tracked.  
-- Each book has title, author, and category.  
-- Library organizes events; members can register.  
-- Each event has one or more speakers/authors.  
-- Rooms are booked for events and study.  
-- Overdue fines apply for late returns.
-
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_library.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
+**User Requirements:**
+- Academic programs grouped under departments.
+- Students have admission number, name, DOB, contact info.
+- Instructors with staff number, contact info, etc.
+- Courses have number, name, credits.
+- Track course enrollments by students and enrollment date.
+- Add support for prerequisites (some courses require others).
 
 ---
 
-# Scenario C: Restaurant Table Reservation & Ordering
+### 🔹 Scenario 2: Hospital Database
+Design a database for patient management, appointments, medical records, and billing.
 
-**Business Context:**  
-A popular restaurant wants to manage reservations, orders, and billing.
-
-**Requirements:**  
-- Customers can reserve tables or walk in.  
-- Each reservation includes date, time, and number of guests.  
-- Customers place food orders linked to reservations.  
-- Each order contains multiple dishes; dishes belong to categories (starter, main, dessert).  
-- Bills generated per reservation, including food and service charges.  
-- Waiters assigned to serve reservations.
-
-### ER Diagram:
-*Paste or attach your diagram here*  
-![ER Diagram](er_diagram_restaurant.png)
-
-### Entities and Attributes
-
-| Entity | Attributes (PK, FK) | Notes |
-|--------|--------------------|-------|
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-|        |                    |       |
-
-### Relationships and Constraints
-
-| Relationship | Cardinality | Participation | Notes |
-|--------------|------------|---------------|-------|
-|              |            |               |       |
-|              |            |               |       |
-|              |            |               |       |
-
-### Assumptions
-- 
-- 
-- 
+**User Requirements:**
+- Patient details including contact and insurance.
+- Doctors and their departments, contact info, specialization.
+- Appointments with reason, time, patient-doctor link.
+- Medical records with treatments, diagnosis, test results.
+- Billing and payment details for each appointment.
 
 ---
 
-## Instructions for Students
+## 📝 Tasks:
+1. Identify entities, relationships, and attributes.
+2. Draw the ER diagram using any tool (draw.io, dbdiagram.io, hand-drawn and scanned).
+3. Include:
+   - Cardinality & participation constraints
+   - Prerequisites for University OR Billing for Hospital
+4. Explain:
+   - Why you chose the entities and relationships.
+   - How you modeled prerequisites or billing.
 
-1. Complete **all three scenarios** (A, B, C).  
-2. Identify entities, relationships, and attributes for each.  
-3. Draw ER diagrams using **draw.io / diagrams.net** or hand-drawn & scanned.  
-4. Fill in all tables and assumptions for each scenario.  
-5. Export the completed Markdown (with diagrams) as **a single PDF**
+# ER Diagram Submission - Student Name
+
+## Scenario Chosen:
+University / Hospital (choose one)
+
+## ER Diagram:
+
+![HOS DB](https://github.com/user-attachments/assets/75339c39-b92a-44bd-b1ef-bf76602c89bf)
+
+## Entities and Attributes:
+### Patient
+
+* PatientID (PK)
+
+* FullName
+
+* DOB
+
+* Gender
+
+* Address
+
+* Phone
+
+* Email
+
+* InsuranceDetails
+
+### Doctor
+
+* DoctorID (PK)
+
+* FullName
+
+* Specialization
+
+* Phone
+
+* Email
+
+* ScheduleDetails
+
+### Department
+
+* DepartmentID (PK)
+
+* DepartmentName
+
+* DepartmentHead
+
+### Appointment
+
+* AppointmentID (PK)
+
+* AppointmentDateTime
+
+* Reason
+
+* Notes
+
+* FK: PatientID
+
+* FK: DoctorID
+
+### MedicalRecord
+
+* MedicalRecordID (PK)
+
+* Diagnosis
+
+* Medications
+
+* Treatments
+
+* TestResults
+
+* VisitDate
+
+* FK: PatientID
+
+* FK: DoctorID
+
+### Billing
+
+* BillingID (PK)
+
+* AppointmentID (FK)
+
+* TotalAmount
+
+* Status (Paid/Unpaid)
+
+* BillingDate
+
+### Payment
+
+* PaymentID (PK)
+
+* BillingID (FK)
+
+* PaymentMode (Cash/Card/Online)
+
+* PaymentDate
+
+* AmountPaid
+
+## Relationships and Constraints:
+
+### Relationships
+
+* Department — Doctor: 1 to Many
+
+* Doctor — Appointment — Patient: Many to Many (via Appointment)
+
+* Patient — MedicalRecord — Doctor: Many to Many
+
+* Appointment — Billing: 1 to 1
+
+* Billing — Payment: 1 to Many (Installments possible)
+
+  ### Cardinality & Constraints
+
+* Every Appointment is between 1 Doctor and 1 Patient.
+
+* A Billing record is created per appointment.
+
+* A Payment may be split into multiple records.
+
+## Extension (Prerequisite / Billing):
+### Extension: Billing and Payment
+
+#### New Entity: Bill
+
+* Attributes: BillID (PK), DateIssued, TotalAmount, Status (e.g., Paid/Unpaid), PaymentMethod
+
+* Relationship: Generates between Appointment and Bill
+
+* One appointment generates one bill, so it’s a 1:1 relationship.
+
+### Optional Extension:
+
+* Add a Payment entity if tracking partial payments or transactions is needed.
+
+* Attributes: PaymentID, AmountPaid, DatePaid, PaymentMethod
+
+* Relationship: One Bill → Many Payments (1:N)
+
+### Design Justification:
+
+* Keeping Bill as a separate entity allows tracking financial data without overloading the Appointment entity.
+
+* Makes it flexible to manage payments, receipts, and outstanding dues.
+
+## Design Choices:
+### Entity Choices and Justifications
+
+#### Patient
+
+* Chosen to represent individuals receiving care.
+
+* Attributes like PatientID, Name, DOB, and InsuranceDetails are critical for identity, communication, and billing.
+
+#### Doctor
+
+* Represents healthcare providers.
+
+* DoctorID, Specialization, and WorkSchedule support patient assignment, filtering, and appointments.
+
+#### Department
+
+* Provides organizational structure (e.g., Cardiology).
+
+* Allows grouping doctors under departments and supports departmental management.
+
+#### Appointment
+
+* Captures interaction between a patient and doctor.
+
+* It’s a many-to-many relationship (a patient may meet many doctors, and doctors consult many patients), resolved as an entity with AppointmentID, DateTime, etc.
+
+#### MedicalRecord
+
+* Tracks clinical data (diagnosis, medications, test results).
+
+* Linked to both Patient and Doctor to preserve accountability and medical history.
+
+#### Bill
+
+* Introduced to track financial transactions.
+
+* Associated with Appointment since billing is usually appointment-based.
+
+* Supports attributes such as TotalAmount, PaymentMethod, and Status.
+
+#### Payment
+
+* Represents actual financial transaction(s) against a bill.
+
+* Allows multiple payments per bill (e.g., installments, partial payments).
+
+* Attributes: PaymentID, BillID, PaymentDate, AmountPaid, PaymentMethod.
+
+### Relationship Choices and Assumptions
+
+#### Patient – Appointment – Doctor
+
+* Modeled via the Appointment entity to capture the many-to-many relationship.
+
+* Includes attributes like ReasonForVisit, Date, and Time.
+
+* A patient can have multiple appointments with different doctors.
+
+#### Doctor – Department
+
+* A department can have many doctors (1:N).
+
+* Each doctor is assigned to one department.
+
+#### MedicalRecord – Patient & Doctor
+
+* MedicalRecord is created for each appointment, linking a specific patient and doctor.
+
+* Relationship: N:1 for both patient and doctor sides.
+
+* Captures diagnoses, prescriptions, and treatments.
+
+#### Appointment – Bill
+
+* Every appointment results in exactly one bill (1:1).
+
+* The Bill entity stores total charges and billing status for the services provided.
+
+#### Bill – Payment
+
+* Each bill can be settled through one or more payments (1:N).
+
+* The Payment entity includes attributes like AmountPaid, PaymentDate, and PaymentMethod.
+
+* Supports partial payments, insurance co-pays, or installments.
+
+### Key Assumptions
+
+* Every patient visit must have a corresponding appointment.
+
+* A bill is always generated for an appointment (even if free, for record-keeping).
+
+* Medical records are visit-based, not cumulative.
+
+* Payment tracking (e.g., partial payments, refunds) can be optionally extended by adding a Payment entity.
+* 
+## RESULT
+Successfully designed an ER diagram for the Hospital Database with entities, relationships, constraints, and billing-extension using the Payment entity to support real-world healthcare operations.
